@@ -7,7 +7,7 @@ const ShoppingBag = () => {
       fill="none"
       xmlns="https://www.w3.org/2000/svg"
       id="cart-shop"
-      class="icon cart-shop"
+      className="icon cart-shop"
       width="25"
       height="25"
     >

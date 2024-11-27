@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import User from "../icons/user";
 import { ShoppingBag } from "lucide-react";
