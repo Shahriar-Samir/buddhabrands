@@ -1,0 +1,28 @@
+import React from "react";
+
+const User = () => {
+  return (
+    <svg
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="https://www.w3.org/2000/svg"
+      id="user"
+      className="icon icon-user"
+      width="25"
+      height="25"
+    >
+      <path
+        d="M2 24.6405C2 19.9211 5.94286 16.0952 14 16.0952C22.0571 16.0952 26 19.9211 26 24.6405C26 25.3913 25.4522 26 24.7765 26H3.22353C2.54779 26 2 25.3913 2 24.6405Z"
+        stroke="currentColor"
+        stroke-width="2.5"
+      ></path>
+      <path
+        d="M18.5 6.5C18.5 8.98528 16.4853 11 14 11C11.5147 11 9.5 8.98528 9.5 6.5C9.5 4.01472 11.5147 2 14 2C16.4853 2 18.5 4.01472 18.5 6.5Z"
+        stroke="currentColor"
+        stroke-width="2.5"
+      ></path>
+    </svg>
+  );
+};
+
+export default User;
