@@ -1,5 +1,3 @@
-/* Black */
-
 p {
   font-family: "Concert One", sans-serif;
   font-weight: 400;
@@ -80,26 +78,44 @@ p {
 
 /* Image over image */
 .parent {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.image1 {
-  position: relative;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  object-position: top;
-  height: 100%;
   width: 100%;
-  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
 }
+
+.banner-breadcumb{
+  width: 80%;
+  max-width: 1500px;
+}
+.banner-background{
+  width: 100%; 
+  height: 565px; 
+}
+
+.main-banner{
+  width: 80% !important;
+  max-width: 1500px;
+}
+
+.parent-banner{
+  background-image: url("https://buddhabrands.ca/cdn/shop/t/55/assets/Mandala_v2_o.svg?v=13973953643622724421706631373");
+  background-repeat: no-repeat;
+  height: 750px;
+  width: 100%;
+  max-width: 890px;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
 .image2 {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
+  height: 70%;
+  width: 70%;
+  max-width: 590px;
   transform: translate(-50%, -50%);
-  width: 80%;
   z-index: 1;
 }
 
@@ -107,24 +123,122 @@ p {
   padding-left: 10% !important;
   padding-right: 3% !important;
   position: absolute !important;
+  width: 100%;
+  height: 100vh;
 }
 
 .first-container .right-side {
-  width: 65% !important;
+  width: 35% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .first-container .left-side {
-  width: 35% !important;
+  width: 65% !important;
   margin-top: 150px !important;
 }
 
-@media (max-width: 780px) {
-  .first-container .right-side {
-    width: 50% !important;
+.banner-right-side{
+  width: 75%;
+}
+
+@media (min-width: 0px) {
+  .banner-breadcumb{
+    width: 90%;
   }
-  .first-container .left-side {
-    width: 50% !important;
-    margin-top: 150px !important;
+
+  .main-banner{
+    width: 90% !important;
   }
+
+  .banner-background{
+    width: 100%; 
+    height: 500px; 
+  }
+
+  .banner-right-side{
+    width: 100%;
+  }
+  .parent-banner{
+    height: 400px;
+  }
+  .banner-start-texts{
+    width: 100%;
+    text-align: start;
+  }
+  .banner-left-side{
+    width: 100%;
+  }
+  .banner-right-side{
+    width: 100%;
+  }
+  
+}
+@media (min-width: 465px) {
+
+  .parent-banner{
+    height: 500px;
+  }
+  .banner-background{
+    width: 100%; 
+    height: 550px; 
+  }
+  
+}
+@media (min-width: 768px) {
+
+  .banner-breadcumb{
+    width: 80%;
+  }
+
+  .main-banner{
+    width: 80% !important;
+  }
+  .banner-background{
+    width: 100%; 
+    height: 400px; 
+  }
+
+  .banner-right-side{
+    width: 75%;
+  }
+  .parent-banner{
+    height: 550px;
+  }
+  .banner-start-texts{
+    width: 35%;
+    text-align: start;
+  }
+  .banner-left-side{
+    width: 50%;
+  }
+  .banner-right-side{
+    width: 75%;
+  }
+  
+}
+@media (min-width: 1068px) {
+
+  .banner-breadcumb{
+    width: 80%;
+  }
+
+  .main-banner{
+    width: 80% !important;
+  }
+  .banner-background{
+    width: 100%; 
+    height: 550px; 
+  }
+
+  .banner-right-side{
+    width: 75%;
+  }
+  .parent-banner{
+    height: 750px;
+  }
+  
+  
 }
 
 /* Wave */
@@ -275,15 +389,17 @@ p {
 
 .container2 {
   display: flex !important;
-  justify-content: space-between !important;
+  justify-content: center;
+  flex-direction: row !important;
 }
 .container2-child {
-  width: 50% !important;
+  width: 30%;
   position: relative;
-  left: -11% !important;
+  height: -100px;
+  text-align: center;
 }
 .container2-child.two {
-  width: 55% !important;
+  width: 50% !important;
   padding-block: 7em;
   top: -170px;
   z-index: 2;
@@ -291,22 +407,166 @@ p {
 }
 .image3 {
   position: relative;
-  top: -130px;
-  left: 100px;
+  left: -20%;
   object-fit: cover;
   object-position: top;
-  height: 440px;
-  width: 450px;
+  height: 100%;
+  width: 100%;
   z-index: 2;
-  /* animation: rotate 7s linear infinite; */
+
 }
 .image4 {
   position: absolute;
-  top: -70px;
-  left: 163px;
-  width: 325px;
+top:20%;
+  left: 5%;
+  width: 50%;
   z-index: 2;
-  /* animation: rotate 13s linear infinite; */
+
+}
+.footer-heading2 {
+  width: 100%;
+  color: #00306e;
+}
+
+
+.footer-heading3 {
+  width: 100%;
+
+}
+
+.footer-p {
+  color: #002d72;
+  font-family: "Grota Sans" !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+@media (min-width:0px) {
+  .container2 {
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column !important;
+    align-items: center;
+    width: 80%;
+    margin-inline:auto;
+  }
+  .image3 {
+    margin-bottom: 220px;
+    left: 0;
+  }
+  .image4 {
+    top:15% !important;
+    left: 25%;
+
+  
+  }
+
+  .footer-h3{
+    text-align: center;
+  }
+  .container2-child {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    height: -100px;
+    text-align: center;
+  }
+  .container2-child.two {
+    width: 100% !important;
+    padding-block: 0em;
+    padding-inline: 0em;
+    top: -170px;
+  }
+
+  .container2-child.two div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center !important;
+  }
+  .footer-heading2 {
+    text-align: center;
+  }
+  .footer-heading3 {
+    text-align: center;
+  }
+  .footer-p {
+    text-align: center;
+  }
+}
+
+@media (min-width:768px) {
+  .footer-h3{
+    text-align: start !important;
+  }
+}
+@media (min-width:1080px) {
+  .container2 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: start;
+    width: 100%;
+
+  }
+
+  .container2 {
+    width: 100%;
+  }
+  .image3 {
+    margin-bottom: 220px;
+    left: 0;
+  }
+  .image4 {
+    top:15% !important;
+    left: 25%;
+
+  
+  }
+
+  .footer-heading2 {
+    text-align: center;
+  }
+  .footer-heading3 {
+    text-align: center;
+  }
+  .footer-p {
+    text-align: center;
+  }
+  .container2-child {
+    width: 30%;
+    position: relative;
+    height: -100px;
+    left: -250px;
+    text-align: center;
+  }
+  .container2-child.two {
+    width: 100% !important;
+    padding-block: 7em;
+    top: -170px;
+    z-index: 2;
+    left: -2% !important;
+  }
+  .container2-child.two div{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: start !important;
+  width: 100%;
+  }
+  .container2-child.two div p{
+    width: fit-content;
+  }
+
+  .footer-heading2 {
+    text-align: start;
+  }
+  .footer-heading3 {
+    text-align: start;
+  }
+  .footer-p {
+    text-align: start;
+  }
 }
 
 @keyframes rotate {
@@ -343,7 +603,8 @@ p {
   border: 0;
   outline: 0 !important;
   font-size: 27px;
-  width: 600px !important;
+  width: 100%;
+  max-width: 600px !important;
 }
 
 /* Google translate button */
@@ -425,12 +686,16 @@ p {
   font-weight: 800 !important;
 }
 
-.footer-p {
-  color: #002d72;
-  font-family: "Grota Sans" !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
+.footer-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
+
+
 
 .footer-link-t {
   font-family: Gotham !important;
@@ -443,14 +708,7 @@ p {
   font-family: "Grota Sans" !important;
 }
 
-.footer-heading2 {
-  width: 100%;
-  color: #00306e;
-}
-.footer-heading3 {
-  width: 100%;
-  color: #00306e;
-}
+
 
 .footer-list {
   display: flex;
@@ -525,6 +783,17 @@ p {
   padding-bottom: 75px;
 }
 
+.last-footer{
+  background-color: #74d1ea;
+  padding-inline: "20px",
+  position: "relative",
+  zIndex: 2,
+  fontWeight: 400,
+  fontStyle: "normal",
+  marginBottom: 0,
+  marginTop: "-250px",
+}
+
 /* footer end image end*/
 
 /* Optional media queries for responsiveness */
@@ -537,10 +806,27 @@ p {
   .footer-copy-right {
     margin-left: 0;
     padding-top: 0.5rem;
+      text-align: center;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-end-link {
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 5em !important;
+  }
+  .footer-icons {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
   }
 }

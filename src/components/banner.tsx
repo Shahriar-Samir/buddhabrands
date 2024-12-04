@@ -2,45 +2,41 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <>
+    <div className="position-relative">
       <div
-        className="short-button"
+        className="w-100 position-absolute"
         style={{ background: "#74d1ea", paddingTop: "3%" }}
       >
-        <p className="m-0">
-          <a
-            className="link footer-link-t"
-            style={{ marginLeft: "10%" }}
-            href="https://buddhabrands.ca/"
-          >
+        <p className="m-0 mx-auto banner-breadcumb">
+          <a className="link footer-link-t" href="https://buddhabrands.ca/">
             Home
           </a>
-          <span style={{ color: "rgba(0, 48, 110)" }}> </span>
+          <span style={{ color: "rgba(0, 48, 110)" }}> &gt; </span>
           <a className="link footer-link-t" href="">
             Shop
           </a>
         </p>
 
-        <div className="d-flex flex-column align-items-center align-items-lg-start flex-lg-row w-100 first-container">
-          <div className="left-side">
-            <h1>
-              <p style={{ fontSize: "50px", color: "#002d72" }}>
+        <div className="main-banner d-flex flex-column flex-md-row mx-auto  ">
+          <div className="banner-start-texts">
+            <h1 className="w-100">
+              <p className="" style={{ fontSize: "50px", color: "#002d72" }}>
                 Shop all snacks and beverages.
               </p>
             </h1>
             <span
               style={{ color: "rgba(0, 48, 110)" }}
-              className="fs-4 fw-semibold"
+              className="fs-4 fw-semibold w-100"
             >
               Nutritious, delicious plant-based snacks and beverages.
             </span>
           </div>
-          <div className="right-side">
-            <div className="parent">
-              <img
+          <div className="banner-right-side">
+            <div className="w-100 position-relative parent-banner">
+              {/* <img
                 className="image1"
                 src="https://buddhabrands.ca/cdn/shop/t/55/assets/Mandala_v2_o.svg?v=13973953643622724421706631373"
-              />
+              /> */}
               <img
                 className="image2"
                 src="https://buddhabrands.ca/cdn/shop/files/collections_hero_690x.png?v=1677961957"
@@ -49,12 +45,9 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div
-        className="w-100 d-none d-lg-block"
-        style={{ height: "450px", backgroundColor: "#74d1ea" }}
-      ></div>
+      <div className="banner-background"></div>
 
-      <div className="Ocean">
+      <div className="Ocean ">
         <svg className="Wave" viewBox="0 0 12960 1120">
           <path d="M9720,320C8100,320,8100,0,6480,0S4860,320,3240,320,1620,0,0,0V1120H12960V0C11340,0,11340,320,9720,320Z">
             <animate
@@ -70,7 +63,7 @@ const Banner = () => {
           </path>
         </svg>
       </div>
-    </>
+    </div>
   );
 };
 

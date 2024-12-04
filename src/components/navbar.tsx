@@ -16,21 +16,20 @@ const Navbar = () => {
           </p>
         </div>
 
-        <nav
-          className="navbar navbar-expand-lg bg-body-tertiary"
-          style={{ background: "#74d1ea !important;" }}
-        >
-          <div className="container-fluid">
-            <a
-              href="https://buddhabrands.ca/"
-              className="site-header__logo"
-              aria-label="Logo"
-            >
-              <img src="./images/title.svg" style={{ width: "150px" }} />
-            </a>
+        <nav className="pt-2" style={{ background: "#74d1ea !important;" }}>
+          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+            <div className="d-flex justify-content-center align-items-center">
+              <a
+                href="https://buddhabrands.ca/"
+                className="site-header__logo"
+                aria-label="Logo"
+              >
+                <img src="./images/title.svg" style={{ width: "150px" }} />
+              </a>
+            </div>
 
             <ul
-              className="d-flex justify-content-center align-items-center gap-4 list-unstyled fs-4"
+              className="d-flex flex-wrap justify-content-center align-items-center gap-4 list-unstyled fs-4"
               id="nav"
               style={{ color: "rgb(0, 48, 110); padding-top: 20px;" }}
             >
@@ -61,7 +60,7 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="nav justify-content-end">
+            <ul className="nav justify-content-center">
               <li className="nav-item">
                 <div id="google_translate_element"></div>
 
