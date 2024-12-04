@@ -785,13 +785,13 @@ top:20%;
 
 .last-footer{
   background-color: #74d1ea;
-  padding-inline: "20px",
-  position: "relative",
-  zIndex: 2,
-  fontWeight: 400,
-  fontStyle: "normal",
-  marginBottom: 0,
-  marginTop: "-250px",
+  padding-inline: "20px";
+  position: "relative";
+  z-index: 2;
+  font-weight: 400;
+  font-style: "normal";
+  margin-bottom: 0;
+  margin-top: "-250px";
 }
 
 /* footer end image end*/
