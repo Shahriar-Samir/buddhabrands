@@ -2,6 +2,8 @@ import Banner from "@/components/banner";
 import FirstContainer from "@/components/first-container";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import SecondContainer from "@/components/second-container";
+import ThirdContainer from "@/components/third-container";
 import React from "react";
 
 const Home = () => {
@@ -10,6 +12,8 @@ const Home = () => {
       <Navbar />
       <Banner />
       <FirstContainer />
+      <SecondContainer />
+      <ThirdContainer />
       {/* functiosn */}
       {/* <script>
 
