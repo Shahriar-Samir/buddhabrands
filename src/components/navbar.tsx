@@ -48,7 +48,7 @@ const Navbar = () => {
                   className="nav-link"
                   href="https://buddhabrands.ca/pages/storelocator"
                 >
-                  <p className="m-0">Where to buy</p>
+                  <p className="m-0 text-center">Where to buy</p>
                 </a>
               </li>
               <li className="nav-item">

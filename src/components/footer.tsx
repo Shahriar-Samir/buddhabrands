@@ -235,7 +235,7 @@ const Footer = () => {
             </h4>
             <div className="footer-email-address"></div>
           </div>
-          <div className="buy-footer">
+          <div className="buy-footer d-flex justify-content-center d-md-block">
             <button className="btn footer-btn button">WHERE TO BUY</button>
           </div>
         </div>
