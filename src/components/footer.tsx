@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <>
+    <footer className="parent-footer">
       <div className="Ocean-2">
         <svg className="Wave-2" viewBox="0 0 12960 1120">
           <path d="M9720,320C8100,320,8100,0,6480,0S4860,320,3240,320,1620,0,0,0V1120H12960V0C11340,0,11340,320,9720,320Z">
@@ -267,7 +267,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </footer>
   );
 };
 

@@ -770,6 +770,11 @@ p {
   font-style: "normal";
   margin-bottom: 0;
   margin-top: "-250px";
+  margin-inline: 1em;
+}
+
+.parent-footer {
+  background-color: #74d1ea;
 }
 
 /* footer end image end*/
