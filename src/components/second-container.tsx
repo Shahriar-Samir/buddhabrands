@@ -1,10 +1,35 @@
 "use client";
 
+import { useRef } from "react";
+
 const SecondContainer = () => {
   const handleViewAll = () => {
     window.location.href =
       "https://buddhabrands.ca/collections/thirsty-buddha-coconut-water";
   };
+
+  const scrollContainerRef = useRef<HTMLDivElement>(null); 
+
+  // Scroll left function
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current?.scrollBy({
+        left: -300, // Scroll left by 300px
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Scroll right function
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current?.scrollBy({
+        left: 300, // Scroll right by 300px
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       <div
@@ -18,6 +43,7 @@ const SecondContainer = () => {
       >
         <button
           className="scroll-left"
+          onClick={handleScrollLeft}
           style={{
             position: "absolute",
             top: "50%",
@@ -35,7 +61,7 @@ const SecondContainer = () => {
           &#10094;
         </button>
 
-        <div className="cart-container">
+        <div className="cart-container" ref={scrollContainerRef}>
           <div className="cart-container-child">
             <div className="card">
               <h1>
@@ -212,6 +238,7 @@ const SecondContainer = () => {
         </div>
 
         <button
+          onClick={handleScrollRight}
           className="scroll-right"
           style={{
             position: "absolute",
