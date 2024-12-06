@@ -35,20 +35,22 @@ const Footer = () => {
             </div>
           </div>
           <div className="container2-child two">
-            <div>
+            <div className="headings">
               <p
                 style={{
                   color: "#00306E",
-                  fontSize: "50px",
+                  fontSize: "40px",
                 }}
+                className="heading1"
               >
                 POWERED BY <span style={{ color: "white" }}>PLANTS</span>.
               </p>
               <p
                 style={{
                   color: "#00306E",
-                  fontSize: "50px",
+                  fontSize: "40px",
                 }}
+                className="heading2"
               >
                 FUELED BY <span style={{ color: "white" }}>PURPOSE</span>.
               </p>
@@ -91,7 +93,7 @@ const Footer = () => {
       </div>
 
       <footer className="last-footer">
-        <div className="d-flex flex-column flex-md-row justify-content-between gap-4">
+        <div className="d-none d-md-flex flex-column flex-md-row justify-content-between gap-4">
           <div className="shop-footer text-center hidden">
             <h3 className="h3-footer footer-h3 w-100 text-center ">Shop</h3>
             <div className="footer-link w-100 text-center text-md-start ">

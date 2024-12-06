@@ -13,7 +13,7 @@ const ThirdContainer = () => {
   // Scroll left function
   const handleScrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current?.scrollBy({
+      scrollContainerRef.current.scrollBy({
         left: -300, // Scroll left by 300px
         behavior: "smooth",
       });
@@ -23,7 +23,7 @@ const ThirdContainer = () => {
   // Scroll right function
   const handleScrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current?.scrollBy({
+      scrollContainerRef.current.scrollBy({
         left: 300, // Scroll right by 300px
         behavior: "smooth",
       });
@@ -63,7 +63,7 @@ const ThirdContainer = () => {
 
         <div className="cart-container" ref={scrollContainerRef}>
           <div className="cart-container-child">
-            <div className="card">
+            <div className="card-1">
               <h1>
                 <p>Thirsty Buddha® Coconut Water</p>
               </h1>
@@ -73,15 +73,12 @@ const ThirdContainer = () => {
               <button className="button" onClick={handleViewAll}>
                 View All
               </button>
-              <div className="card-body">
-                <p className="card-text">
-                  <img
-                    id="card-img"
-                    src="https://buddhabrands.ca/cdn/shop/files/coco-water_390x310.png?v=1681418888"
-                    alt=""
-                  />
-                </p>
-              </div>
+
+              <img
+                id="card-img"
+                src="https://buddhabrands.ca/cdn/shop/files/coco-water_390x310.png?v=1681418888"
+                alt=""
+              />
             </div>
           </div>
 
@@ -101,6 +98,9 @@ const ThirdContainer = () => {
                     src="https://cdn.accentuate.io/6305467334844/1676753812851/classic-coconut-water-hover.png?v=1676753812851"
                   />
                 </div>
+              </div>
+              <div className="card-image">
+                <img src="/images/classic-coconut-water.webp" />
               </div>
               <div className="card-body">
                 <h4>
@@ -131,6 +131,9 @@ const ThirdContainer = () => {
                   />
                 </div>
               </div>
+              <div className="card-image">
+                <img src="/images/classic-coconut-water.webp" />
+              </div>
               <div className="card-body">
                 <h4>
                   <p className="card-text">Coconut Water with Pulp</p>
@@ -160,6 +163,9 @@ const ThirdContainer = () => {
                   />
                 </div>
               </div>
+              <div className="card-image">
+                <img src="/images/classic-coconut-water.webp" />
+              </div>
               <div className="card-body">
                 <h4>
                   <p className="card-text">
@@ -176,6 +182,9 @@ const ThirdContainer = () => {
 
           <div className="cart-container-child">
             <div className="card">
+              <div className="card-image">
+                <img src="/images/classic-coconut-water.webp" />
+              </div>
               <div
                 className="card-img-top"
                 style={{ backgroundColor: "rgba(240, 205, 27, 0.945)" }}
@@ -207,6 +216,9 @@ const ThirdContainer = () => {
 
           <div className="cart-container-child">
             <div className="card">
+              <div className="card-image">
+                <img src="/images/classic-coconut-water.webp" />
+              </div>
               <div
                 className="card-img-top"
                 style={{ backgroundColor: "rgba(240, 205, 27, 0.945)" }}

@@ -1,6 +1,60 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+
+// Extend the global Window interface to include Google Translate types
+declare global {
+  interface Window {
+    googleTranslateElementInit?: () => void;
+    google?: {
+      translate: {
+        TranslateElement: {
+          new (
+            options: {
+              pageLanguage: string;
+              includedLanguages: string;
+              layout: number; // Updated layout type to match Google Translate API
+            },
+            containerId: string
+          ): void;
+          InlineLayout: {
+            SIMPLE: number; // Simple Inline Layout
+            DROPDOWN: number; // Dropdown Layout
+          };
+        };
+      };
+    };
+  }
+}
 
 const Navbar = () => {
+  useEffect(() => {
+    // Dynamically load the Google Translate script
+    const addGoogleTranslateScript = () => {
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src =
+        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    // Initialize Google Translate
+    window.googleTranslateElementInit = () => {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,fr",
+            layout:
+              window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    };
+
+    addGoogleTranslateScript();
+  }, []);
   return (
     <>
       <header>
@@ -16,7 +70,7 @@ const Navbar = () => {
           </p>
         </div>
 
-        <nav className="pt-2" style={{ background: "#74d1ea !important;" }}>
+        <nav className="pt-2 px-md-5 second-nav">
           <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
             <div className="d-flex justify-content-center align-items-center">
               <a
@@ -60,30 +114,50 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="nav justify-content-center">
+            <ul className="nav justify-content-center gap-4">
               <li className="nav-item">
                 <div id="google_translate_element"></div>
-
-                {/* <script type="text/javascript">
-                            function googleTranslateElementInit() {
-                            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,bn,hi,fr", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-                            }
-                        </script>
-                        
-                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> */}
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="https://buddhabrands.ca/account/login"
+                <svg
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="https://www.w3.org/2000/svg"
+                  id="user"
+                  className="icon icon-user"
+                  width="25"
+                  height="25"
                 >
-                  <img id="profile" src="images/person.png" alt="" />
-                </a>
+                  <path
+                    d="M2 24.6405C2 19.9211 5.94286 16.0952 14 16.0952C22.0571 16.0952 26 19.9211 26 24.6405C26 25.3913 25.4522 26 24.7765 26H3.22353C2.54779 26 2 25.3913 2 24.6405Z"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  ></path>
+                  <path
+                    d="M18.5 6.5C18.5 8.98528 16.4853 11 14 11C11.5147 11 9.5 8.98528 9.5 6.5C9.5 4.01472 11.5147 2 14 2C16.4853 2 18.5 4.01472 18.5 6.5Z"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  ></path>
+                </svg>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://buddhabrands.ca/cart">
-                  <img id="profile" src="images/shopping_bag.png" alt="" />
-                </a>
+                <svg
+                  viewBox=" 0 0 28 28"
+                  fill="none"
+                  xmlns="https://www.w3.org/2000/svg"
+                  id="cart-shop"
+                  className="icon cart-shop"
+                  width="25"
+                  height="25"
+                >
+                  <path
+                    d="M18.5 9.5V5.75C18.5 3.26472 16.4853 1.25 14 1.25C11.5147 1.25 9.5 3.26472 9.5 5.75V9.5M4.90909 26.75H23.0909C24.6976 26.75 26 25.4718 26 23.895L24.1364 8.74996C24.1364 7.17318 22.8339 5.89494 21.2273 5.89494H6.40909C4.80244 5.89494 3.5 7.17318 3.5 8.74996L2 23.895C2 25.4718 3.30244 26.75 4.90909 26.75Z"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
               </li>
             </ul>
           </div>

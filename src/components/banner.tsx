@@ -17,7 +17,7 @@ const Banner = () => {
           </a>
         </p>
 
-        <div className="main-banner d-flex flex-column flex-md-row mx-auto  ">
+        <div className="main-banner d-flex align-items-center flex-column flex-md-row mx-auto  ">
           <div className="banner-start-texts">
             <h1 className="w-100">
               <p className="" style={{ fontSize: "50px", color: "#002d72" }}>
