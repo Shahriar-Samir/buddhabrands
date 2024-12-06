@@ -11,6 +11,88 @@ p {
   padding-block: 10px;
 }
 
+.hamburger-menu {
+  position: relative;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Change the lines to "X" when open */
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+  background-color: #002d72 !important;
+}
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+  background-color: #002d72 !important;
+}
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+  background-color: #002d72 !important;
+}
+
+/* Menu Styles */
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 10px 0;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9;
+}
+
+.menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: #007bff;
+}
+
 .second-nav {
   background: #74d1ea !important;
   padding-bottom: 1em;

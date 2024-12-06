@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // Extend the global Window interface to include Google Translate types
 declare global {
@@ -27,6 +27,11 @@ declare global {
 }
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   useEffect(() => {
     // Dynamically load the Google Translate script
     const addGoogleTranslateScript = () => {
@@ -54,7 +59,7 @@ const Navbar = () => {
     };
 
     addGoogleTranslateScript();
-  }, []);
+  }, [isOpen]);
   return (
     <>
       <header>
@@ -71,7 +76,7 @@ const Navbar = () => {
         </div>
 
         <nav className="pt-2 px-md-5 second-nav">
-          <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+          <div className="d-flex px-3 justify-content-between align-items-center">
             <div className="d-flex justify-content-center align-items-center">
               <a
                 href="https://buddhabrands.ca/"
@@ -83,7 +88,7 @@ const Navbar = () => {
             </div>
 
             <ul
-              className="d-flex flex-wrap justify-content-center align-items-center gap-4 list-unstyled fs-4"
+              className="d-none  d-xl-flex flex-wrap justify-content-center align-items-center gap-4 list-unstyled fs-4 "
               id="nav"
               style={{ color: "rgb(0, 48, 110); padding-top: 20px;" }}
             >
@@ -114,8 +119,8 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="nav justify-content-center gap-4">
-              <li className="nav-item">
+            <ul className="nav justify-content-center align-items-center gap-4">
+              <li className="nav-item d-none d-xl-block">
                 <div id="google_translate_element"></div>
               </li>
               <li className="nav-item">
@@ -131,12 +136,12 @@ const Navbar = () => {
                   <path
                     d="M2 24.6405C2 19.9211 5.94286 16.0952 14 16.0952C22.0571 16.0952 26 19.9211 26 24.6405C26 25.3913 25.4522 26 24.7765 26H3.22353C2.54779 26 2 25.3913 2 24.6405Z"
                     stroke="currentColor"
-                    stroke-width="2.5"
+                    strokeWidth="2.5"
                   ></path>
                   <path
                     d="M18.5 6.5C18.5 8.98528 16.4853 11 14 11C11.5147 11 9.5 8.98528 9.5 6.5C9.5 4.01472 11.5147 2 14 2C16.4853 2 18.5 4.01472 18.5 6.5Z"
                     stroke="currentColor"
-                    stroke-width="2.5"
+                    strokeWidth="2.5"
                   ></path>
                 </svg>
               </li>
@@ -153,11 +158,44 @@ const Navbar = () => {
                   <path
                     d="M18.5 9.5V5.75C18.5 3.26472 16.4853 1.25 14 1.25C11.5147 1.25 9.5 3.26472 9.5 5.75V9.5M4.90909 26.75H23.0909C24.6976 26.75 26 25.4718 26 23.895L24.1364 8.74996C24.1364 7.17318 22.8339 5.89494 21.2273 5.89494H6.40909C4.80244 5.89494 3.5 7.17318 3.5 8.74996L2 23.895C2 25.4718 3.30244 26.75 4.90909 26.75Z"
                     stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></path>
                 </svg>
+              </li>
+              <li className="nav-item  d-xl-none">
+                {" "}
+                <div className="hamburger-menu">
+                  {/* Hamburger Icon */}
+                  <button
+                    className={`hamburger ${isOpen ? "open" : ""}`}
+                    onClick={toggleMenu}
+                  >
+                    <span className="line"></span>
+                    <span className="line"></span>
+                    <span className="line"></span>
+                  </button>
+
+                  {/* Menu Items */}
+                  <nav className={`menu ${isOpen ? "open" : ""}`}>
+                    <ul>
+                      <li>
+                        <a href="">Products</a>
+                      </li>
+                      <li>
+                        <a href="">Learn</a>
+                      </li>
+                      <li>
+                        <a href="">Where to buy</a>
+                      </li>
+                      <li>
+                        <a href="">Contact</a>
+                      </li>
+                      <div id="google_translate_element"></div>
+                    </ul>
+                  </nav>
+                </div>
               </li>
             </ul>
           </div>
