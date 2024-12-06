@@ -45,6 +45,9 @@ p {
 #profile {
   width: 25px;
 }
+.banner-container {
+  background: "#74d1ea";
+}
 
 /* Link Underline on hover  */
 .link {
@@ -97,11 +100,13 @@ p {
 .banner-background {
   width: 100%;
   height: 565px;
+  background: "#74d1ea";
 }
 
 .main-banner {
   width: 80% !important;
   max-width: 1500px;
+  background: "#74d1ea" !important;
 }
 
 .parent-banner {
@@ -110,7 +115,7 @@ p {
   height: 750px;
   width: 100%;
   max-width: 890px;
-  background-size: 100% 100%;
+  background-size: 100% 80%;
   background-position: center;
 }
 
@@ -118,10 +123,11 @@ p {
   position: absolute;
   top: 45%;
   left: 50%;
-  height: 70%;
+  height: 60%;
   width: 70%;
   max-width: 590px;
   transform: translate(-50%, -50%);
+
   z-index: 1;
 }
 
@@ -171,6 +177,7 @@ p {
   .banner-start-texts {
     width: 100%;
     text-align: start;
+    margin-top: 2em;
   }
   .banner-left-side {
     width: 100%;
@@ -210,6 +217,7 @@ p {
   .banner-start-texts {
     width: 35%;
     text-align: start;
+    margin-top: 2em;
   }
   .banner-left-side {
     width: 50%;
@@ -219,6 +227,9 @@ p {
   }
 }
 @media (min-width: 1080px) {
+  .banner-start-texts {
+    margin-top: 10em;
+  }
   .parent {
     left: 50;
   }
@@ -280,6 +291,8 @@ p {
   overflow-x: hidden; /* Hide the scrollbar, but enable scrolling */
   scroll-behavior: smooth;
   gap: 20px; /* Space between cards */
+  max-width: 1400px !important;
+  margin-inline: auto !important;
 }
 
 .cart-container::-webkit-scrollbar {
@@ -706,7 +719,7 @@ p {
 .card-img-1 {
   position: relative;
   bottom: 0;
-  left: 0;
+  left: -18%;
   object-fit: cover;
   object-position: top;
   margin-top: 75px;
@@ -716,7 +729,7 @@ p {
 }
 .card-img-2 {
   position: absolute;
-  left: 50%;
+  left: 35%;
   transform: translate(-50%, -0%);
   bottom: 0;
   width: 155px;

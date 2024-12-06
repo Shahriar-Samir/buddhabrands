@@ -17,8 +17,8 @@ const Banner = () => {
           </a>
         </p>
 
-        <div className="main-banner d-flex align-items-center flex-column flex-md-row mx-auto  ">
-          <div className="banner-start-texts">
+        <div className="main-banner d-flex flex-column flex-md-row mx-auto  ">
+          <div className="banner-start-texts ">
             <h1 className="w-100">
               <p className="" style={{ fontSize: "50px", color: "#002d72" }}>
                 Shop all snacks and beverages.
@@ -33,10 +33,6 @@ const Banner = () => {
           </div>
           <div className="banner-right-side">
             <div className="w-100 position-relative parent-banner">
-              {/* <img
-                className="image1"
-                src="https://buddhabrands.ca/cdn/shop/t/55/assets/Mandala_v2_o.svg?v=13973953643622724421706631373"
-              /> */}
               <img
                 className="image2"
                 src="https://buddhabrands.ca/cdn/shop/files/collections_hero_690x.png?v=1677961957"
